@@ -1,0 +1,1 @@
+import{I as e,o,c as s,J as _,K as t,b as a}from"./index-de1de77c.js";const d={},n=c=>(_("data-v-9893c0cc"),c=c(),t(),c),r={class:"loader-container"},p=n(()=>a("div",{class:"loader"},null,-1)),i=[p];function l(c,h){return o(),s("div",r,i)}const v=e(d,[["render",l],["__scopeId","data-v-9893c0cc"]]);export{v as L};
