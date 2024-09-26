@@ -12,9 +12,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/menu',
-      name: 'menu',
-      component: () => import('../views/MenuView.vue')
+      path: '/catalog',
+      name: 'catalog',
+      component: () => import('../views/CatalogView.vue')
     },
     {
       path: '/login',
@@ -41,8 +41,8 @@ const router = createRouter({
         },
         {
           path: '/admin/items',
-          name: 'current-menu',
-          component: () => import('../views/admin/CurrentMenuView.vue')
+          name: 'current-catalog',
+          component: () => import('../views/admin/CurrentCatalogView.vue')
         },
       ]
     },

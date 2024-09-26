@@ -18,7 +18,7 @@
         try {
             authStore.login(data);
             setTimeout(() => {
-                router.push({name: 'current-menu'})
+                router.push({name: 'current-catalog'})
             }, 3000);
         } catch (error) {
             console.log(error);
@@ -57,7 +57,7 @@
         </Dialog>
 
         <h2 class="text-center text-2xl font-bold">Iniciar sesión</h2>
-        <p class="text-gray-600 text-center">Debes estár registrado como <span class="text-emerald-500 font-semibold">Administrador</span> para poder agregar, modificar o eliminar el catálogo.</p>
+        <p class="text-gray-600 text-center">Debes estár registrado como <span class="text-emerald-500 font-semibold">Administrador</span> para poder acceder.</p>
 
         <div class="w-11/12 md:w-6/12 mt-11 mx-auto">
             <Loader v-if="authStore.loading || authStore.successMessage"/>

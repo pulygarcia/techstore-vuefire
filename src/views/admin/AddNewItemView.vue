@@ -34,6 +34,11 @@
                 router.push({name: 'current-menu'})
             }, 3000);
 
+            formData.name = ''
+            formData.price = ''
+            formData.category = ''
+            formData.description = ''
+            formData.image = ''
         } catch (error) {
             console.log(error);
         }
@@ -42,8 +47,8 @@
 
 <template>
     <div class="mt-10 container mx-auto">
-        <h2 class="text-center text-2xl font-bold">Agregar al menú</h2>
-        <p class="text-gray-600 text-center">Aquí podrás agregar nuevos productos a la carta.</p>
+        <h2 class="text-center text-2xl font-bold">Agregar al catálogo</h2>
+        <p class="text-gray-600 text-center">Aquí podrás agregar nuevos productos al catálogo.</p>
 
         <Dialog :open="items.successMessage ? true : false" class="relative z-50">
             <div class="fixed top-0 flex w-screen items-center justify-end p-2">
@@ -89,10 +94,10 @@
                         v-model="formData.image"
                     />
 
-                    <div v-if="imageUploaded">
+                    <!-- <div v-if="imageUploaded">
                         <p class="font-black">Imagen cargada: </p>
                         <img :src="url" class="w-32" alt="Nuevo producto imagen"/>
-                    </div>
+                    </div> -->
 
                     <FormKit 
                         type="select"

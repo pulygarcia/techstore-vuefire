@@ -16,7 +16,7 @@
 </script>
 
 <template>
-  <header class="bg-red-500 text-white">
+  <header class="bg-emerald-500 text-white">
         <div class="container mx-auto w-11/12 md:w-full flex justify-between items-center py-4">
             <div class="">
                 <a href="#" class="flex items-center gap-1">
@@ -30,33 +30,33 @@
             </div>
             <nav class="hidden md:block">
                 <ul class="flex gap-10">
-                    <li class="shadow text-sm font-semibold transition hover:bg-red-600 rounded p-1 flex items-center gap-1">
+                    <li class="shadow text-sm font-semibold transition bg-emerald-700 hover:bg-emerald-600 rounded p-2 flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                         </svg>
                         <RouterLink :to="{name: 'home'}">Volver al inicio</RouterLink>
                     </li>
-                    <li class="shadow text-sm font-semibold transition hover:bg-red-600 rounded p-1 flex items-center gap-1">
+                    <li class="shadow text-sm font-semibold transition bg-emerald-700 hover:bg-emerald-600 rounded p-2 flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                         </svg>
-                        <RouterLink :to="{name: 'current-menu'}">Carta actual</RouterLink>
+                        <RouterLink :to="{name: 'current-catalog'}">Catálogo actual</RouterLink>
                     </li>
-                    <li class="shadow text-sm font-semibold transition hover:bg-red-600 rounded p-1 flex items-center gap-1">
+                    <li class="shadow text-sm font-semibold transition bg-emerald-700 hover:bg-emerald-600 rounded p-2 flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
 
-                        <RouterLink :to="{name: 'new-item'}">Agregar al menú</RouterLink>
+                        <RouterLink :to="{name: 'new-item'}">Agregar al catálogo</RouterLink>
                     </li>
 
                     <button 
                         v-if="authStore.currentUser"
                         @click="authStore.logout" 
                         type="button" 
-                        class="bg-white flex items-center gap-1 p-1 text-sm font-semibold rounded text-black hover:shadow-lg hover:bg-gray-100"
+                        class="bg-red-500 flex items-center gap-1 p-1 text-sm font-semibold rounded hover:shadow-lg hover:bg-red-400"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#3b82f6" class="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                         </svg>
 
@@ -78,7 +78,7 @@
                 :class="isOpenMenu ? 'animate-fade-left animate-duration-300' : ''"
             >
                 <button class="close-menu" @click="closeMenu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ef4444" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" stroke-width="1.5" stroke="#10b981" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M18 6l-12 12" />
                         <path d="M6 6l12 12" />
@@ -87,7 +87,7 @@
                 <nav>
                     <div class="flex items-center gap-2 mt-4">
                         <p class=" font-bold text-xl">Panel de administración</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ef4444" class="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#10b981" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
                         </svg>
                     </div>
@@ -101,7 +101,7 @@
                             <span>Volver al inicio</span>
                         </RouterLink>
 
-                        <RouterLink :to="{name: 'current-menu'}" class="text-sm font-semibold bg-[#efefef] rounded p-1 flex items-center justify-center gap-1" @click="isOpenMenu = false">
+                        <RouterLink :to="{name: 'current-catalog'}" class="text-sm font-semibold bg-[#efefef] rounded p-1 flex items-center justify-center gap-1" @click="isOpenMenu = false">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -116,16 +116,16 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </li>
-                            <span>Agregar al menú</span>
+                            <span>Agregar al catálogo</span>
                         </RouterLink>
 
                         <button
                             v-if="authStore.currentUser"
                             @click="authStore.logout" 
                             type="button" 
-                            class="bg-sky-200 flex items-center justify-center gap-1 p-1 text-sm font-semibold rounded text-black hover:shadow-lg"
+                            class="bg-red-200 flex items-center justify-center gap-1 p-1 text-sm font-semibold rounded text-black hover:shadow-lg"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#3b82f6" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ef4444" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                             </svg>
 

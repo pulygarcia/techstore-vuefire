@@ -25,7 +25,7 @@
     </a>
     <div class="px-5 pb-5">
         <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{item.name}} <span v-if="item.category === 1" class="text-gray-500 text-sm">x6</span></h5>
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{item.name}}</h5>
         </a>
         <div class="flex items-center mt-2.5 mb-2 md:mb-5">
             <div class="flex items-center space-x-1 rtl:space-x-reverse">
@@ -48,7 +48,7 @@
         </div>
         <div class="flex md:items-center flex-col md:flex-row md:justify-between">
             <span class="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">{{ formatCurrency(item.price) }}</span>
-            <button @click="setIsOpen(true)" type="button" class="mt-2 md:mt-0 text-white bg-red-400 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Ver más</button>
+            <button @click="setIsOpen(true)" type="button" class="mt-2 md:mt-0 text-white bg-emerald-400 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm md:text-md px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">Ver más</button>
         </div>
     </div>
 </div>
@@ -70,26 +70,33 @@
                     </DialogTitle>
 
                     <DialogTitle as="h2" class="text-lg font-bold truncate my-3 py-1 flex items-center gap-2">
-                        <span class="underline">Categoría:</span> <span class="font-normal text-gray-700"> {{ item.category === 1 ? 'Piezas' : 'Combos' }}</span>
+                        <span class="underline">Categoría:</span> <span class="font-normal text-gray-700"> {{ item.category === 1 ? 'Usados' : 'Nuevos' }}</span>
                     </DialogTitle>
 
                     <DialogTitle as="h2" class="text-lg font-bold truncate my-3 underline">
-                        Contenido / Ingredientes :
+                        Descripción/Detalles :
                     </DialogTitle>
 
                     <p class="text-gray-700">{{ item.description }}</p>
 
                     <DialogTitle as="h2" class="text-lg font-bold truncate mt-10">
-                        Precio <span class="text-gray-700 text-lg font-normal">{{ item.category === 1 ? 'x6' : 'del combo' }}</span> : 
+                        Precio de contado: 
                         
-                        <span class="text-red-400 font-semibold text-xl">{{ formatCurrency(item.price) }}</span>
+                        <span class="text-emerald-600 font-bold text-xl">{{ formatCurrency(item.price) }}</span>
                     </DialogTitle>
                   </div>
                 </div>
                 <div class="mt-5 sm:mt-6 flex justify-between gap-4">
+                    <a
+                        :href="'https://wa.me/3865601314?text=👋Hola. Vengo desde el sitio web de TechnoApple. Quisiera consultar stock disponible del producto: '+ item.name"
+                        class="w-full bg-emerald-500 text-white font-bold text-center rounded-lg py-2 hover:bg-emerald-400 transition"
+                        @click="setIsOpen(false)"
+                    >
+                        Comprar
+                    </a>
                     <button
                         type="button"
-                        class="w-full bg-red-600 text-white font-bold text-center rounded-lg py-2 hover:bg-red-800 transition"
+                        class="w-full bg-red-500 text-white font-bold text-center rounded-lg py-2 hover:bg-red-400 transition"
                         @click="setIsOpen(false)"
                     >
                         Cerrar

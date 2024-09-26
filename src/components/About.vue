@@ -14,6 +14,9 @@
                 <h4 class="text-emerald-700 text-2xl">Acerca de nosotros</h4>
                 <h2 class="text-5xl md:text-6xl font-semibold leading-10">Nuestro propósito es ofrecerte la mejor experiencia.</h2>
                 <p class="text-[#121212] text-xl leading-relaxed">Nos especializamos en la venta de iPhones usados y sellados en caja, garantizando productos de alta calidad y un servicio confiable. Ya sea que busques un dispositivo a estrenar o uno reacondicionado, tenemos opciones para cada necesidad. Además, ofrecemos garantía en todos nuestros productos para tu tranquilidad. Queremos que disfrutes de la tecnología Apple con la confianza de que estás en las mejores manos.</p>
+                <button class="text-lg font-semibold bg-emerald-500 rounded p-3 text-white hover:bg-emerald-400 transition flex items-center gap-1">
+                    <RouterLink :to="{name: 'catalog'}">Ver productos</RouterLink>
+                </button>
             </article>
         </div>
     </main>

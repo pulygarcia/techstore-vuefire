@@ -23,7 +23,7 @@ const config = {
               fileItem: 'hidden'
           },
           submit:{
-              input: '$reset bg-emerald-500 py-2 w-full mt-5 font-bold text-white hover:bg-red-800 transition disabled:opacity-50'
+              input: '$reset bg-emerald-500 py-2 w-full mt-5 font-bold text-white hover:bg-emerald-800 transition disabled:opacity-50'
           }
       })
   }

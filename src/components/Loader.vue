@@ -18,7 +18,7 @@
   width: 50px;
   height: 50px;
   display: inline-block;
-  border: 5px solid rgb(255, 17, 0);
+  border: 5px solid #10b981;
   border-radius: 50%;
   border-top-color: transparent;
   border-bottom-color: transparent;
@@ -32,7 +32,7 @@
 
   50% {
     transform: rotate(180deg);
-    border-top-color: rgb(139, 46, 46);
+    border-top-color: #10b981;
     border-bottom-color: rgb(243, 92, 33);
     border-right-color: transparent;
     border-left-color: transparent;

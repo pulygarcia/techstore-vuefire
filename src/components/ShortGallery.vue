@@ -11,10 +11,10 @@
         <img class="max-w-full rounded-lg h-40 md:h-80 w-full object-cover" src="/iphone.jpg" alt="iphone">
     </div>
     <div>
-        <img class="max-w-full rounded-lg h-40 md:h-80 w-full object-cover" src="/iphones-3.jpg" alt="rolls">
+        <img class="max-w-full rounded-lg h-40 md:h-80 w-full object-cover" src="/iphones-3.jpg" alt="iphone">
     </div>
     <div class="md:hidden">
-        <img class="max-w-full rounded-lg h-40 md:h-80 w-full object-cover" src="/4.jpg" alt="rolls">
+        <img class="max-w-full rounded-lg h-40 md:h-80 w-full object-cover" src="/iphones.jpg" alt="iphone">
     </div>
 </section>
 </template>

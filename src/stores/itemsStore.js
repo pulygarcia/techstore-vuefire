@@ -14,8 +14,8 @@ export const useItemsStore = defineStore('items', () => {
     const loading = ref(false);
 
     const categories = [
-        {id: 1, name: 'Pieza'},
-        {id: 2, name: 'Combo'}
+        {id: 1, name: 'Usados'},
+        {id: 2, name: 'Nuevos'}
     ]
     
     const q = query(
