@@ -8,7 +8,7 @@ export const useItemsStore = defineStore('items', () => {
     const db = useFirestore();
     const storage = useFirebaseStorage();
     
-    const selectedCategory = ref(1);
+    const selectedCategory = ref(null);
 
     const successMessage = ref('');
     const loading = ref(false);
@@ -116,8 +116,11 @@ export const useItemsStore = defineStore('items', () => {
 
 
     const filteredItems = computed(() => {
-        //Double filter to remove items from this view when the item isnt available (or doesnt have stock)
-        return itemsCollection.value.filter(item => item.category === selectedCategory.value);
+        if(selectedCategory.value !== null){
+            return itemsCollection.value.filter(item => item.category === selectedCategory.value);
+        }else{
+            return itemsCollection.value
+        }
     })
 
 

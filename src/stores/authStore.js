@@ -15,8 +15,9 @@ export const useAuthStore = defineStore('auth', () => {
     const loading = ref(false);
 
     const errors = {
-        'auth/invalid-login-credentials' : 'Invalid login credentials',
-        'auth/wrong-password' : 'Wrong password'
+        'auth/invalid-login-credentials' : 'Credenciales inválidas',
+        'auth/wrong-password' : 'Contraseña incorrecta',
+        'auth/too-many-requests' : 'Demasiados intentos para ingresar'
     }
 
     onMounted(() => {
@@ -37,15 +38,16 @@ export const useAuthStore = defineStore('auth', () => {
             // Signed in 
             currentUser.value = userCredential.user;
             //console.log(currentUser.value);
-            successMessage.value = 'Session started successfully'
+            successMessage.value = 'Sesión iniciada correctamente'
             setTimeout(() => {
                 successMessage.value = '';
-                router.push({name: 'current-menu'})
+                router.push({name: 'current-catalog'})
             }, 3000);
 
         })
         .catch((error) => {
             currentError.value = errors[error.code];
+            console.log(error.code);
         })
         .finally(() => {
             loading.value = false;
@@ -57,7 +59,7 @@ export const useAuthStore = defineStore('auth', () => {
             signOut(auth).then(() => {
                 // Sign-out successful.
                 currentUser.value = null;
-                successMessage.value = 'User session was closed';
+                successMessage.value = 'Sesión de usuario cerrada';
                 setTimeout(() => {
                     successMessage.value = '';
                     router.push({name: 'login'})

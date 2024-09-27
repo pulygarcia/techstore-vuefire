@@ -21,7 +21,7 @@
 
 <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="p-4 rounded-t-lg h-36 w-full object-cover md:h-80 md:w-full" :src="item.image" :alt="item.name" />
+        <img class="p-4 rounded-t-lg h-36 w-full object-contain md:h-80 md:w-full" :src="item.image" :alt="item.name" />
     </a>
     <div class="px-5 pb-5">
         <a href="#">
@@ -89,17 +89,19 @@
                 <div class="mt-5 sm:mt-6 flex justify-between gap-4">
                     <a
                         :href="'https://wa.me/3865601314?text=👋Hola. Vengo desde el sitio web de TechnoApple. Quisiera consultar stock disponible del producto: '+ item.name"
-                        class="w-full bg-emerald-500 text-white font-bold text-center rounded-lg py-2 hover:bg-emerald-400 transition"
+                        class="w-full bg-emerald-500 text-white font-bold text-center rounded-lg py-2 hover:bg-emerald-400 transition flex items-center justify-center gap-1"
                         @click="setIsOpen(false)"
                     >
-                        Comprar
+                        <span>Comprar</span>
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
                     </a>
                     <button
                         type="button"
-                        class="w-full bg-red-500 text-white font-bold text-center rounded-lg py-2 hover:bg-red-400 transition"
+                        class="w-full bg-red-500 text-white font-bold text-center rounded-lg py-2 hover:bg-red-400 transition flex items-center justify-center gap-1"
                         @click="setIsOpen(false)"
                     >
-                        Cerrar
+                        <span>Cerrar</span>
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
                     </button>
                 </div> 
               </DialogPanel>
