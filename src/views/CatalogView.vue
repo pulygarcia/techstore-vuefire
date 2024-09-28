@@ -9,7 +9,7 @@
 <template>
     <Header />
 
-    <main class="container mx-auto w-11/12 md:w-full py-10">
+    <main class="container mx-auto w-11/12 md:w-full py-10 mt-12 md:mt-16">
         <h2 class="text-center text-2xl font-bold">Productos</h2>
         <p class="text-gray-600 text-center">¡No dudes en consultar por cualquiera de ellos!</p>
 
@@ -36,7 +36,7 @@
             </button>
         </div>
 
-        <div class="grid grid-cols-2 gap-2 md:gap-8 lg:grid-cols-4 mt-8 mx-auto">
+        <div class="grid grid-cols-2 gap-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4 mt-8 mx-auto">
             <MenuItem 
                 v-for="item in items.filteredItems"
                 :key="item.id"

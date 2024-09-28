@@ -29,7 +29,7 @@
 <template>
     <Header />
 
-    <main class="container mx-auto mt-8">
+    <main class="container mx-auto mt-24 md:mt-28">
         <!-- DIALOG ERROR -->
         <Dialog :open="authStore.currentError ? true : false" class="relative z-50">
             <div class="fixed top-0 flex w-screen items-center justify-end p-2">

@@ -116,11 +116,15 @@ export const useItemsStore = defineStore('items', () => {
 
 
     const filteredItems = computed(() => {
-        if(selectedCategory.value !== null){
-            return itemsCollection.value.filter(item => item.category === selectedCategory.value);
-        }else{
-            return itemsCollection.value
+
+        let filtered = itemsCollection.value;
+
+        if (selectedCategory.value !== null) {
+            filtered = filtered.filter(item => item.category === selectedCategory.value);
         }
+
+        // Retrun the array organized by price
+        return filtered.sort((a, b) => b.price - a.price);
     })
 
 

@@ -82,7 +82,7 @@
                     <DialogTitle as="h2" class="text-lg font-bold truncate mt-10">
                         Precio de contado: 
                         
-                        <span class="text-emerald-600 font-bold text-xl">{{ formatCurrency(item.price) }}</span>
+                        <span class="text-emerald-500 font-bold text-2xl">Us{{ formatCurrency(item.price) }}</span>
                     </DialogTitle>
                   </div>
                 </div>
