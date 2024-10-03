@@ -1,4 +1,4 @@
-# aspid-menu
+# Tech store Vue + Firebase
 
 Open the [Deploy here](https://sushimenu-dfb1c.web.app/) to check how this project looks.
 
